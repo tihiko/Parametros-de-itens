@@ -1,0 +1,95 @@
+/* Navbar */
+.navbar {
+    background-color: #1a73e8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .menu-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .menu-button:focus {
+    outline: none;
+  }
+  
+  .user-section {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+    gap: 10px;
+  }
+  
+  .user-section span {
+    background-color: white;
+    color: #1a73e8;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -500px; /* Fora da tela por padrão */
+    width: 250px;
+    height: 100%;
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Mostra o menu lateral */
+  }
+  
+  .sidebar-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    margin: 15px 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .sidebar-submenu {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .sidebar-submenu li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .logout {
+    color: #ff5252;
+    font-weight: bold;
+  }
+  
