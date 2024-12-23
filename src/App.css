@@ -1,18 +1,20 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+  background-color: #f9f9f9; /* Cor de fundo */
+  box-sizing: border-box; /* Inclui bordas no cálculo do tamanho */
   }
   html, body {
-    width: 100%;
-    overflow-x: hidden; /* Remove o scroll horizontal */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 30px; /* Adiciona espaçamento interno de 20px nas laterais */
+  
+  overflow-x: hidden; /* Remove o scroll horizontal */
   }
   .App {
     width: 100%;
-    margin: 10 auto;
+   
   }
   .App {
     margin-left: 0;
@@ -24,58 +26,6 @@ body {
     margin-left: 250px;
   }
   
-  /* Navbar Styles */
-  .navbar {
-    background-color: #1a73e8;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-  }
-  
-  .menu-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .menu-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .menu-button:focus {
-    outline: none;
-  }
-  
-  .menu-icon {
-    display: inline-block;
-  }
-  
-  .navbar h1 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  .user-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .user-section span {
-    background-color: white;
-    color: #1a73e8;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 1rem;
-  }
   
   .search-bar-container {
     display: flex;
@@ -100,33 +50,33 @@ body {
   
   .search-button {
     padding: 10px 20px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: black;
+    width: 150px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
   }
   
   .search-button:hover {
-    background-color: #1666c5;
+    background-color: rgb(43, 63, 52);
   }
   
   .btn {
     padding: 10px 20px;
-    background-color: #1a73e8;
+    background-color: rgb(43, 63, 52);
     color: white;
-    border: none;
-    border-radius: 4px;
+    width: 250px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
   }
   
   .btn:hover {
-    background-color: #1666c5;
+    background-color: rgb(43, 63, 52);
   }
   .search-bar-container .btn:hover {
-    background-color: #1666c5;
+    background-color:rgb(43, 63, 52);
   }
   /* Toggle "Visualizar Mais Detalhes" */
   .toggle-details-container {
@@ -136,6 +86,10 @@ body {
     width: 90%;
     margin: 10px auto;
     gap: 10px;
+  }
+
+  .toggle-details-container.active {
+    background-color: rgb(43, 63, 52);
   }
   
   .toggle-switch {
@@ -175,12 +129,11 @@ body {
     border-radius: 50%;
   }
   
-  .toggle-switch input:checked + .slider {
-    background-color: #1a73e8;
-  }
+
   
   .toggle-switch input:checked + .slider:before {
     transform: translateX(20px);
+    background-color: rgb(43, 63, 52);
   }
   
   .toggle-label {
@@ -188,80 +141,13 @@ body {
     color: #333;
   }
   
-  /* Table Styles */
-  .item-table-container {
-    width: 90%;
-    margin: 0 auto;
-    overflow-x: auto; /* Add horizontal scroll if the table overflows */
-  }
-  
-  .item-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .item-table th,
-  .item-table td {
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    text-align: left;
-    white-space: nowrap;
-  }
-  
-  .item-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  .item-table td {
-    font-size: 0.95rem;
-  }
-  
-  .edit-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #1a73e8;
-  }
-  
-  .edit-button:hover {
-    color: #1666c5;
-  }
+
   .sidebar.open ~ .App {
     margin-left: 250px;
   }
   /* Menu lateral (Novo Item) */
-.new-item-sidebar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 400px;
-    height: 100%;
-    background-color: #f5f5f5;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease-in-out;
-    padding: 20px;
-    z-index: 1000;
-  }
-  
-  .new-item-sidebar.open {
-    right: 0;
-  }
-  
-  .new-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .new-item-header h2 {
-    font-size: 1.5rem;
-  }
+
+ 
   
   .back-button {
     background: none;
@@ -270,38 +156,9 @@ body {
     cursor: pointer;
   }
   
-  .new-item-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+ 
   
-  .new-item-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
   
-  .new-item-form input,
-  .new-item-form select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #45a049;
-  }
   .details-toggle-container {
     display: flex;
     justify-content: flex-end;
@@ -345,7 +202,7 @@ body {
   }
   
   .details-toggle input:checked + .slider {
-    background-color: #4caf50;
+    background-color: rgb(43, 63, 52);
   }
   
   .details-toggle input:checked + .slider:before {
@@ -403,21 +260,21 @@ body {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .submit-button {
-  background-color: #4caf50;
+  background-color: rgb(43, 63, 52);
   color: white;
   border: none;
   padding: 10px;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
 .submit-button:hover {
-  background-color: #45a049;
+  background-color: rgb(43, 63, 52);
 }
 
 .pagination {
@@ -429,7 +286,7 @@ body {
 .page-button {
   padding: 10px 15px;
   margin: 0 5px;
-  background-color: #1a73e8;
+  background-color: rgb(43, 63, 52);
   color: white;
   border: none;
   border-radius: 4px;

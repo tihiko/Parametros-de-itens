@@ -155,11 +155,16 @@ const App = () => {
       </div>
 
       <div className={`new-item-sidebar ${isSidebarOpen ? "open" : ""}`}>
-        <div className="new-item-header">
-          <button className="back-button" onClick={toggleSidebar}>
+        <div className="return-header">
+        <button className="back-button" onClick={toggleSidebar}>
             ← Voltar
           </button>
-          <h2>{currentItem?.id ? "Editar Item" : "Novo Item"}</h2>
+        </div>
+        
+        
+        <div className="new-item-header">
+          
+          <h2>{currentItem?.id ? "Editar Item" : "Crie um novo item"}</h2>
         </div>
         <form className="new-item-form" onSubmit={handleSaveItem}>
           <label>Item</label>

@@ -22,7 +22,7 @@ const ItemTable = ({ items, detailsVisible, onEdit, onToggleStatus }) => {
       <tbody>
         {items.length === 0 ? (
           <tr>
-            <td colSpan={detailsVisible ? 6 : 4}>Nenhum item cadastrado</td>
+            
           </tr>
         ) : (
           items.map((item) => (

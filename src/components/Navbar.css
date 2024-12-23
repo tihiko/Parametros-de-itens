@@ -1,95 +1,184 @@
-/* Navbar */
+/* Navbar Styles */
 .navbar {
-    background-color: #1a73e8;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-  }
+  background-color: #f9f9f9; /* Fundo do Navbar */
+  color: black;
+  display: flex;
+  justify-content: space-between; /* Alinha os elementos nas extremidades */
+  align-items: center;
+ 
+  width: 100%;
+  border-bottom: 1px solid black; /* Linha separadora */
+}
+
+/* Menu Button Container */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os itens do menu */
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none; /* Remove o contorno de foco */
+}
+
+.menu-icon {
+  display: inline-block;
+}
+
+/* User Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os itens do usuário */
+}
+
+/* Título do Navbar */
+.navbar h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 10px;
+  filter: grayscale(100%) brightness(0.5); /* Torna a imagem cinza e ajusta o brilho */
+  mix-blend-mode: multiply; /* Combina com o fundo para efeito mais forte */
+}
+
+/* Iniciais do Usuário */
+.user-initials {
+  background-color: rgb(80, 209, 166); /* Fundo verde */
+  color: white;
+  font-weight: bold;
+  border-radius: 50%; /* Torna o fundo circular */
+  padding: 10px 10px; /* Espaçamento interno */
+  font-size: 1rem;
+}
+/* Tamanho e estilo dos ícones */
+.icon {
+  width: 16px; /* Define a largura do ícone */
+  height: 16px; /* Define a altura do ícone */
+  object-fit: contain; /* Garante que o ícone não fique distorcido */
+}
+
+/* Sidebar Styles */
+.sidebar {
   
-  .menu-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  position: fixed;
+  top: 0;
+  left: -500px; /* Fora da tela por padrão */
+  width: 300px; /* Largura da sidebar */
+  height: 100%;
+  background-color: rgb(43, 63, 52);
+  color: white;
+
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+ 
+  transition: left 0.3s ease-in-out; /* Animação para abrir/fechar */
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+
+  font-size: 1.8rem; /* Tamanho do título */
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* Linha abaixo */
+  margin-bottom: 20px;
+  padding-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Itens Principais */
+.sidebar-item {
+ 
+  display: flex;
+
+  justify-content: flex-start; /* Alinha os itens principais à esquerda */
+  gap: 40px; /* Espaço entre o ícone e o texto */
+  font-size: 1.4rem; /* Tamanho maior da fonte */
+  padding: 20px; /* Espaçamento interno maior */
+  cursor: pointer;
+  border-radius: 8px; /* Cantos arredondados */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: white; /* Fundo branco ao passar o mouse */
+  color: rgb(43, 63, 52); /* Texto na cor desejada */
+}
+
+/* Subitens */
+.sidebar-submenu {
+  list-style-type: none;
+  padding-left: 25px; /* Indentação para diferenciar dos itens principais */
+}
+
+.sidebar-submenu li {
+  display: flex; /* Flex para alinhar a seta e o texto */
+  align-items: center; /* Alinha verticalmente os itens */
+  gap: 10px; /* Espaço entre a seta e o texto */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.2rem; /* Tamanho menor da fonte */
+  cursor: pointer;
+  border-radius: 5px; /* Cantos arredondados */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-submenu li:hover {
+  background-color: white;
+  color: rgb(43, 63, 52);
+}
+
+/* Ícones */
+.icon {
+  width: 24px; /* Tamanho dos ícones dos itens principais */
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Setas nos subitens */
+.sidebar-submenu .arrow-icon {
+  width: 16px; /* Tamanho das setas */
+  height: 16px;
+  object-fit: contain;
+  margin-left: 0; /* Remove margem para alinhar à esquerda */
+}
+
+/* Botão de Logout */
+.logout-container {
+  display: flex;
+
+align-items: center;
+
+justify-content: center;
+  margin-top: auto; /* Posiciona o botão "Sair" no final da sidebar */
   
-  .menu-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+}
+
+.logout {
   
-  .menu-button:focus {
-    outline: none;
-  }
-  
-  .user-section {
-    display: flex;
-    align-items: center;
-    margin-right: 60px;
-    gap: 10px;
-  }
-  
-  .user-section span {
-    background-color: white;
-    color: #1a73e8;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 1rem;
-  }
-  
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -500px; /* Fora da tela por padrão */
-    width: 250px;
-    height: 100%;
-    background-color: #004d40;
-    color: white;
-    padding: 20px;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-  }
-  
-  .sidebar.open {
-    left: 0; /* Mostra o menu lateral */
-  }
-  
-  .sidebar-header {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar-menu {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar-item {
-    margin: 15px 0;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .sidebar-submenu {
-    list-style-type: none;
-    padding: 0;
-    padding-left: 15px;
-    font-size: 0.9rem;
-  }
-  
-  .sidebar-submenu li {
-    margin: 10px 0;
-    cursor: pointer;
-  }
-  
-  .logout {
-    color: #ff5252;
-    font-weight: bold;
-  }
-  
+  color: White;
+  font-weight: bold;
+  font-size: 1.2rem;
+  /* Espaçamento interno */
+}
+
+.arrow-icon {
+  width: 16px; /* Tamanho das setas */
+  height: 16px;
+  object-fit: contain;
+}
