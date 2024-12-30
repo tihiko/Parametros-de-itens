@@ -20,6 +20,7 @@
 .item-table thead::before {
   content: "";
   position: absolute;
+  
   top: -10px; /* Faz o fundo expandir para cima */
   left: -10px; /* Faz o fundo expandir para a esquerda */
   right: -10px; /* Faz o fundo expandir para a direita */
@@ -31,6 +32,7 @@
 
 /* Células do Cabeçalho */
 .item-table th {
+  
   background-color: transparent; /* Remove o fundo padrão */
   font-weight: bold;
   font-size: 1rem;
@@ -48,9 +50,10 @@
 
 /* Células do Corpo da Tabela */
 .item-table td {
+  text-align: center;
   font-size: 0.95rem;
   padding: 10px 15px; /* Espaçamento interno */
-  text-align: left;
+  
   
 }
 
